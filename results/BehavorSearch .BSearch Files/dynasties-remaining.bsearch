@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE search SYSTEM "behaviorsearch.dtd">
+<search>
+    <bsearchVersionNumber>1.10</bsearchVersionNumber>
+    <modelInfo>
+        <modelFile>C:\Users\matty\Documents\Computer Science Masters\CO7315-Bio-Inspired-Computing\Assignment\2 Assignment\Gnots.nlogo</modelFile>
+        <modelSetupCommands>setup</modelSetupCommands>
+        <modelStepCommands>go</modelStepCommands>
+        <modelStopCondition/>
+        <modelStepLimit>2000</modelStepLimit>
+        <modelMetricReporter>dynasties-remaining</modelMetricReporter>
+        <modelMeasureIf/>
+    </modelInfo>
+    <fitnessInfo>
+        <fitnessMinimized>false</fitnessMinimized>
+        <fitnessCollecting>AT_FINAL_STEP</fitnessCollecting>
+        <fitnessSamplingReplications>10</fitnessSamplingReplications>
+        <fitnessCombineReplications>MEAN</fitnessCombineReplications>
+    </fitnessInfo>
+    <searchSpace>
+        <paramSpec>["population" [20 4 40]]</paramSpec>
+        <paramSpec>["mean-strength" [50 1 60]]</paramSpec>
+        <paramSpec>["stddev-strength" [5 1 10]]</paramSpec>
+        <paramSpec>["egg-laying-radius" [4 1 9]]</paramSpec>
+        <paramSpec>["expected-egg-quantity" [3 1 10]]</paramSpec>
+        <paramSpec>["inherit-parent-strength" true false]</paramSpec>
+    </searchSpace>
+    <searchMethod type="StandardGA">
+        <searchMethodParameter name="mutation-rate" value="0.03"/>
+        <searchMethodParameter name="population-size" value="50"/>
+        <searchMethodParameter name="crossover-rate" value="0.7"/>
+        <searchMethodParameter name="population-model" value="generational"/>
+        <searchMethodParameter name="tournament-size" value="3"/>
+    </searchMethod>
+    <chromosomeRepresentation type="GrayBinaryChromosome"/>
+    <caching>true</caching>
+    <evaluationLimit>300</evaluationLimit>
+    <bestCheckingNumReplications>0</bestCheckingNumReplications>
+</search>
